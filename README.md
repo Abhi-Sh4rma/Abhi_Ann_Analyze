@@ -1,53 +1,108 @@
-<<<<<<< HEAD
-# Abhi_Ann_Analyze
-=======
-## Customer Churn ANN
+# 🚀 AI Customer Risk Analyzer
 
-This project trains a simple artificial neural network for customer churn prediction and serves it with a Streamlit app.
+An interactive **Machine Learning web app** that predicts whether a customer is likely to churn using an Artificial Neural Network (ANN).
 
-## Project Files
+🔗 Built with Streamlit | TensorFlow | Scikit-learn
 
-- [model.ipynb](model.ipynb) trains the model, evaluates it, and saves the artifacts.
-- [app.py](app.py) is the Streamlit inference app.
-- [Artificial_Neural_Network_Case_Study_data.csv](Artificial_Neural_Network_Case_Study_data.csv) is the training dataset.
-- [artifacts/](artifacts/) stores the saved model and preprocessing files.
+---
 
-## Requirements
+## 📊 Features
 
-Use Python 3.13 with the project virtual environment, then install dependencies.
+* 🔮 Predict customer churn probability
+* 📈 Displays risk percentage (Churn vs Retention)
+* 🎯 Clean and interactive UI dashboard
+* ⚡ Real-time predictions using trained ANN model
 
-```bash
-uv sync
+---
+
+## 🧠 How It Works
+
+The model is trained on customer data and uses:
+
+* Gender encoding
+* Geography one-hot encoding
+* Feature scaling (StandardScaler)
+* Artificial Neural Network (ANN)
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── app.py
+├── model.ipynb
+├── requirements.txt
+├── artifacts/
+│   ├── churn_ann_model.keras
+│   ├── scaler.pkl
+│   └── feature_columns.json
+├── Artificial_Neural_Network_Case_Study_data.csv
 ```
 
-If you prefer pip, install from `requirements.txt`.
+---
 
-```bash
+## ⚙️ Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/Abhi-Sh4rma/Abhi_Ann_Analyze.git
+cd Abhi_Ann_Analyze
+```
+
+Install dependencies:
+
+```
 pip install -r requirements.txt
 ```
 
-## Train the Model
+---
 
-1. Open [model.ipynb](model.ipynb).
-2. Run all cells from top to bottom.
-3. The last cell saves these files into [artifacts/](artifacts/):
-   - `churn_ann_model.keras`
-   - `scaler.pkl`
-   - `feature_columns.json`
+## 🧪 Train the Model (Optional)
 
-The app depends on those saved files, so the notebook must be run at least once before launching Streamlit.
+If you want to retrain the model:
 
-## Run the App
+1. Open `model.ipynb`
+2. Run all cells
+3. Ensure artifacts are generated inside `/artifacts`
 
-```bash
+---
+
+## ▶️ Run the App Locally
+
+```
 streamlit run app.py
 ```
 
-Enter customer details in the form and click Predict Churn to see both churn probability and stay probability.
+---
 
-## Notes
+## 🌍 Deployment
 
-- The model uses the same preprocessing in both the notebook and the app: gender encoding, geography one-hot encoding, and standard scaling.
-- A churn probability below 50% is shown as `WILL STAY`.
-- If Streamlit shows a missing artifact error, re-run [model.ipynb](model.ipynb) to regenerate the files in [artifacts/](artifacts/).
->>>>>>> 5c0d3f14 (Added ANN churn prediction project)
+This app is deployed using **Streamlit Community Cloud**
+
+👉 Live App: https://abhi-sh4rma-ann-analyze.streamlit.app/
+
+---
+
+## 📌 Notes
+
+* Model predicts churn probability based on user input
+* Threshold:
+
+  * ≥ 50% → High Risk
+  * < 50% → Low Risk
+* Make sure artifacts exist before running the app
+
+---
+
+## 👨‍💻 Author
+
+**Abhishek Sharma**
+Aspiring Cybersecurity & AI Enthusiast 🔐🤖
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
